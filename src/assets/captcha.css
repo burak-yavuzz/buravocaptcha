@@ -1,0 +1,47 @@
+.captcha-engine {
+  display: inline-flex;
+  user-select: none;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.canvas-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.canvas-wrapper:hover {
+  border-color: #cbd5e1;
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+.captcha-canvas {
+  cursor: pointer;
+  border-radius: 8px;
+  background: #f8fafc;
+  transition: opacity 0.2s ease;
+  image-rendering: pixelated; 
+}
+
+.captcha-canvas:hover {
+  opacity: 0.9;
+}
+
+.captcha-canvas:active {
+  transform: scale(0.97); 
+}
+
+.canvas-wrapper:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
